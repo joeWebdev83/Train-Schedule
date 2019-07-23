@@ -1,18 +1,23 @@
 // Initialize Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyDNFBRrT2vmNUN0jMNeCKgjdd3-w05M67g",
+    authDomain: "trains-a4566.firebaseapp.com",
+    databaseURL: "https://trains-a4566.firebaseio.com",
+    projectId: "trains-a4566",
+    storageBucket: "trains-a4566.appspot.com",
+    messagingSenderId: "466777158619",
+    appId: "1:466777158619:web:8206057897873282"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
-    var Config = {
-        apiKey: "AIzaSyDNFBRrT2vmNUN0jMNeCKgjdd3-w05M67g",
-        authDomain: "trains-a4566.firebaseapp.com",
-        databaseURL: "https://trains-a4566.firebaseio.com",
-        projectId: "trains-a4566",
-        storageBucket: "trains-a4566.appspot.com",
-        messagingSenderId: "466777158619",
-        appId: "1:466777158619:web:8206057897873282"
-      };
 
-  firebase.initializeApp(Config);
-  
+  console.log(firebase);
+//var database = firebase.database();
+
   var database = firebase.database();
+
+  
   
   $("#submit").on("click", function() {
     console.log("input");
@@ -91,3 +96,4 @@
         "</tr></td>"
     );
   });
+
