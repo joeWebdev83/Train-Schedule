@@ -1,0 +1,21 @@
+.jumbotron{
+	
+	background-color:white;
+	
+}
+
+.jumbotron h1 {
+	color:rgb(217, 217, 228);
+}
+
+body{
+	background-image: url("https://thumbs.dreamstime.com/z/background-mountain-blue-sky-train-station-109002758.jpg");
+}
+
+.fa-train{
+	color: rgb(63, 63, 209);
+}
+
+h5 {
+	color: red;
+}
