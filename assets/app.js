@@ -43,7 +43,7 @@ setInterval(update, 1000);
 });
 
 
-// Capture Button Click
+// Button Click
 $("#add-train").on("click", function() {
 
 // Grabbed values from text boxes
@@ -52,25 +52,23 @@ destination = $("#destination").val().trim();
 firstTrainTime = $("#train-time").val().trim();
 frequency = $("#frequency").val().trim();
 
-// First Time (pushed back 1 year to make sure it comes before current time)
+
 var firstTimeConverted = moment(firstTrainTime, "hh:mm").subtract(1, "years");
-//console.log("FTC: "+firstTimeConverted);
+
 
 // Difference between the times
 var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-//console.log("Difference in time: " + diffTime);
+
 
 // Time apart (remainder)
 var tRemainder = diffTime % frequency;
-//console.log(tRemainder);
 
 // Minute Until Train
 var minutesAway = frequency - tRemainder;
-//console.log("Minutes away: " + minutesAway);
+
 
 // Next Train
 var nextTrain = moment().add(minutesAway, "minutes");
-//console.log("Arrival time: " + moment(nextTrain).format("hh:mm"));
 
 // Arrival train
 var nextArrival = moment(nextTrain).format("hh:mm a");
